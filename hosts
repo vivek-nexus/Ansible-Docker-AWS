@@ -1,0 +1,8 @@
+# This is the ansible 'hosts' file.
+
+[servers]
+server1 ansible_host=18.223.184.111
+
+[servers:vars]
+ansible_python_interpreter=/usr/bin/python3
+

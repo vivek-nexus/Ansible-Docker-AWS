@@ -1,0 +1,47 @@
+---
+- hosts: all
+  remote_user: ubuntu
+  become: yes
+  become_method: sudo
+
+  tasks:
+    - name: Test connection to server by Ansible
+      ping:
+
+    - name: Install aptitude using apt
+      apt: name=aptitude state=latest update_cache=yes force_apt_get=yes
+
+    - name: Install required system packages
+      apt: name={{ item }} state=latest update_cache=yes
+      loop: [ 'apt-transport-https', 'ca-certificates', 'curl', 'software-properties-common', 'python3-pip', 'virtualenv', 'python3-setuptools']
+
+    - name: Add Docker GPG apt Key
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: Add Docker Repository
+      apt_repository:
+        repo: deb https://download.docker.com/linux/ubuntu bionic stable
+        state: present
+
+    - name: Update apt and install docker-ce
+      apt: update_cache=yes name=docker-ce state=latest
+  
+    - name: Install pip
+      apt: name=python-pip state=present
+      
+    - name: Install docker-py
+      pip: name=docker-py
+
+    - name: Clone DockerFile and HTML Files from git
+      shell: git clone https://github.com/yakshaG/Ngnix-DockerImage.git
+
+    - name: Build Docker image yaksha/mysite-static from Dockerfile
+      docker_image:
+        name: yaksha/mysite-static
+        path: Ngnix-DockerImage
+        state: build
+
+    - name: Run container image in detached mode. Listening on port 8888. To see the site, visit server_ip:8888. Example, "18.219.28.242:8888"
+      shell: docker run --rm -d -p 8888:80 yaksha/mysite-static
