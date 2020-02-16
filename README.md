@@ -53,7 +53,7 @@ The EC2 instance needs to be launched with the following configuration/settings:
 
 # Results
 Check the web page being served from the container on: 
-[18.224.138.221:8888](18.224.138.221:8888)
+[18.224.138.221:8888](http://18.224.138.221:8888)
 (Above server will remain active till 29 Feb 23:59 IST)
 
 # Trouble Shooting
