@@ -1,7 +1,8 @@
 
+
 # What is this?
 
-This is **beginner's diary** of getting started with deploying a **Docker Container, serving a simple web page, deployment being done with Ansible.** Know more about [What is Docker](https://docker-curriculum.com/#what-is-docker-)? and [What is Ansible](https://www.ansible.com/overview/how-ansible-works)?
+This is **beginner's dairy** of getting started with deploying a **Docker Container, serving a simple web page, deployment being done with Ansible.** Know more about [What is Docker](https://docker-curriculum.com/#what-is-docker-)? and [What is Ansible](https://www.ansible.com/overview/how-ansible-works)?
 
 
 # How does it work?
@@ -44,11 +45,16 @@ The EC2 instance needs to be launched with the following configuration/settings:
  - Grab your EC2 instance IP. Navigate your terminal to the cloned directory, edit the hosts file with your favourite text editor and replace the server IP with your EC2 instance IP. 
  `$ nano hosts`
  
- - Run the Ansible Playbook **MainScript.yml** in the cloned directory: `$ ansible-playbook MainScript.yml -i hosts` Each step might take a few minutes depending on the bandwidth and server resources.
+ - Run the Ansible Playbook **MainScript.yml** in the cloned directory: `$ ansible-playbook MainScript.yml -i hosts`. Each step might take a few minutes depending on the bandwidth and server resources.
  - Finally you would get a message displaying PLAY RECAP and successful run of the Playbook.
  - Access the site with your EC2 instance IP on port 8888, from any web browser, like this: `12.13.14.15:8888`
  - There we get the site, running on a single docker container with the following message!
  `Hi from Docker Container! This page is being served from a docker container running Nginx, hosted on AWS EC2 Instance.`
+
+# Results
+Check the web page being served from the container on: 
+[18.224.138.221:8888](18.224.138.221:8888)
+(Above server will remain active till 29 Feb 23:59 IST)
 
 # Trouble Shooting
 
