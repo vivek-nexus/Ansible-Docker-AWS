@@ -44,7 +44,7 @@ The EC2 instance needs to be launched with the following configuration/settings:
  - Grab your EC2 instance IP. Navigate your terminal to the cloned directory, edit the hosts file with your favourite text editor and replace the server IP with your EC2 instance IP. 
  `$ nano hosts`
  
- - Run the Ansible Playbook **MainScript.yml** in the cloned directly: `$ ansible-playbook MainScript.yml -i hosts`. Each step might take a few minutes depending on the bandwidth and server resources.
+ - Run the Ansible Playbook **MainScript.yml** in the cloned directory: `$ ansible-playbook MainScript.yml -i hosts`. Each step might take a few minutes depending on the bandwidth and server resources.
  - Finally you would get a message displaying PLAY RECAP and successful run of the Playbook.
  - Access the site with your EC2 instance IP on port 8888, from any web browser, like this: `12.13.14.15:8888`
  - There we get the site, running on a single docker container with the following message!
