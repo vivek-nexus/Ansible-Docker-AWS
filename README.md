@@ -1,3 +1,4 @@
+
 # What is this?
 
 This is **beginner's dairy** of getting started with deploying a **Docker Container, serving a simple web page, with Ansible.** Know more about [What is Docker](https://docker-curriculum.com/#what-is-docker-) and [What is Ansible](https://www.ansible.com/overview/how-ansible-works)?
@@ -37,9 +38,12 @@ The EC2 instance needs to be launched with the following configuration/settings:
 
 # Usage
 
- - Clone this repository onto a folder on local machine/control server
+ - Clone this repository onto a folder on local machine/control server 
+ `$ git clone https://github.com/yakshaG/Ansible-Docker-AWS.git`
+ 
  - Grab your EC2 instance IP. Navigate your terminal to the cloned directory, edit the hosts file with your favourite text editor and replace the server IP with your EC2 instance IP. 
  `$ nano hosts`
+ 
  - Run the Ansible Playbook **MainScript.yml**: `$ ansible-playbook MainScript.yml -i hosts`. Each step might take a few minutes depending on the bandwidth and server resources.
  - Finally you would get a message displaying PLAY RECAP and successful run of the Playbook.
  - Access the site with your EC2 instance IP on port 8888, from any web browser, like this: `12.13.14.15:8888`
