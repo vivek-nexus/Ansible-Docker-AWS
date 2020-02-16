@@ -18,7 +18,7 @@ Ansible script will be run from a local machine/another server which will connec
 # Pre-Requisites
 ## On the local Machine/Control Server
 
- - Ansible installed. If not, use below command to install:
+Ansible installed. If not, use below command to install:
 `sudo apt update && sudo apt install ansible`
 
 ## On the Actual Server
