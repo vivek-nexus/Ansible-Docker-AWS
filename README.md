@@ -1,7 +1,7 @@
 
 # What is this?
 
-This is **beginner's dairy** of getting started with deploying a **Docker Container, serving a simple web page, with Ansible.** Know more about [What is Docker](https://docker-curriculum.com/#what-is-docker-) and [What is Ansible](https://www.ansible.com/overview/how-ansible-works)?
+This is **beginner's dairy** of getting started with deploying a **Docker Container, serving a simple web page, with Ansible.** Know more about [What is Docker](https://docker-curriculum.com/#what-is-docker-) and [What is Ansible](https://www.ansible.com/overview/how-ansible-works)
 
 
 # How does it work?
